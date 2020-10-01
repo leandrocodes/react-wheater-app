@@ -21,4 +21,35 @@ body {
 
 main {
   height: 100vh;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.25));
+  padding: 2rem;
+}
+
+.search-box {
+  width: 100%;
+  margin: 0 0 4rem;
+}
+
+.search-box .search-bar {
+  display: block;
+  width: 100%;
+  padding: 1.5rem;
+  appearance: none;
+  background: none;
+  border: none;
+  border-radius: 0.25rem;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.15);
+  color: white;
+  font-size: 1rem;
+  transition: background 250ms ease-in-out;
+}
+
+.search-box .search-bar::placeholder {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.search-box .search-bar:focus {
+  background-color: rgba(0, 0, 0, 0.25);
+  /* transition: background 100ms ease-in-out; */
 }

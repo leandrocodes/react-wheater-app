@@ -9,9 +9,9 @@ function App() {
   return (
     <div className="app">
       <main>
-        <div className="seach-box">
+        <div className="search-box">
           <input type="text" 
-            className="seach-bar" 
+            className="search-bar" 
             placeholder="Search..."
           />
         </div>
