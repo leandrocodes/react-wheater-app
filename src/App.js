@@ -6,6 +6,28 @@ const api = {
 }
 
 function App() {
+
+  const dateBuilder = date => {
+    const months = ['January', 'February', 
+      'March', 'April', 
+      'June', 'July', 
+      'August', 'September', 
+      'October', 'November', 
+      'December'
+    ]
+    const days = ['Sunday', 'Monday', 
+      'Tuesday', 'Wednesday', 
+      'Thursday', 'Friday', 'Saturday'
+    ]
+
+    const day = days[date.getDay()]
+    const convertedDate = date.getDate()
+    const month = months[date.getMonth() - 1]
+    const year = date.getFullYear()
+
+    return `${day} ${convertedDate} ${month} ${year}`
+  }
+
   return (
     <div className="app">
       <main>
@@ -14,6 +36,10 @@ function App() {
             className="search-bar" 
             placeholder="Search..."
           />
+        </div>
+        <div className="location-box">
+          <div className="location">Ponta Porã, BR</div>
+          <div className="date">{dateBuilder (new Date ())}</div>
         </div>
       </main>
     </div>
