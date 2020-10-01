@@ -41,6 +41,10 @@ function App() {
           <div className="location">Ponta Porã, BR</div>
           <div className="date">{dateBuilder (new Date ())}</div>
         </div>
+        <div className="weather-box">
+          <div className="temp">45°C</div>
+          <div className="weather">Sunny</div>
+        </div>
       </main>
     </div>
   );
