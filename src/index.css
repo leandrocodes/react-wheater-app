@@ -19,6 +19,15 @@ body {
   background-image: url('./images/rainy.jpg');
 }
 
+@media screen and (min-width: 800px) {
+  .app {
+    background-image: url('./images/sunny-wide.jpg');
+  }
+  .app.cold {
+    background-image: url('./images/rainy-wide.jpg');
+  }
+}
+
 main {
   height: 100vh;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.25));
