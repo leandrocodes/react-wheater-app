@@ -9,14 +9,14 @@ function App() {
   const [query, setQuery] = useState('')
   const [weather, setWeather] = useState({})
 
-  const search = event => {
+  const search = async event => {
     if (event.key === 'Enter') {
-      fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
-        .then(res => res.json())
-        .then(result => {
-          setQuery('')
-          setWeather(result)
-        })
+      const result = await fetch(
+        `${api.base}weather?q=${query}&units=metric&APPID=${api.key}`
+      )
+      const weather = await result.json()
+      setQuery('')
+      setWeather(weather)
     }
   }
 
